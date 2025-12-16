@@ -1,6 +1,61 @@
 # ShawaRun (シャワラン！)
 #### 🚿 シャワーを浴びて、一日の行動スイッチをONに！
 
+---
+
+## 🛠️ クイックスタート
+
+### 前提条件
+- Node.js (v18以上推奨)
+- npm または yarn
+- Expo Go アプリ (スマホで動作確認する場合)
+
+### インストール手順
+
+```bash
+# 1. 依存関係をインストール
+npm install
+
+# 2. Expoを起動
+npx expo start
+```
+
+### 動作確認
+1. ターミナルにQRコードが表示されます
+2. **iOS**: カメラアプリでQRコードをスキャン
+3. **Android**: Expo Goアプリでスキャン
+4. シミュレータ/エミュレータで実行する場合:
+   - iOS: `i` キーを押す
+   - Android: `a` キーを押す
+
+### 📂 プロジェクト構造
+
+```
+ShawaRun/
+├── App.tsx                    # メインエントリポイント
+├── src/
+│   ├── screens/
+│   │   ├── HomeScreen.tsx     # ホーム画面
+│   │   ├── HistoryScreen.tsx  # 履歴画面
+│   │   ├── TodoScreen.tsx     # Todo作成画面
+│   │   └── FeedbackScreen.tsx # 感想入力画面
+│   ├── types/
+│   │   └── index.ts           # 型定義
+│   └── utils/
+│       └── storage.ts         # AsyncStorage操作
+├── package.json
+├── app.json
+└── tsconfig.json
+```
+
+### 🎨 技術スタック
+- **React Native** (Expo SDK 52)
+- **TypeScript**
+- **React Navigation** (Native Stack)
+- **AsyncStorage** (データ永続化)
+
+---
+
 ## 1. 概要 (Introduction)
 
 本システムは、朝の行動を促進する習慣化支援アプリです。朝、シャワーや入浴が億劫で、その日一日をだらだらと過ごしてしまうというユーザーに対し、シャワーを「行動のトリガー」として活用することで、生産性の高い一日をスタートするための支援を提供します。
